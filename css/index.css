@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Noto Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/noto-sans-v11-latin_greek-regular.eot");
+  /* IE9 Compatibility Modes */
+  src: local(""), url("../fonts/noto-sans-v11-latin_greek-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-sans-v11-latin_greek-regular.woff2") format("woff2"), url("../fonts/noto-sans-v11-latin_greek-regular.woff") format("woff"), url("../fonts/noto-sans-v11-latin_greek-regular.ttf") format("truetype"), url("../fonts/noto-sans-v11-latin_greek-regular.svg#Noto Sans") format("svg");
+  /* Legacy iOS */
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.navbar-light {
+  background: #95A3A5;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #384F4F;
+  text-decoration: none;
+  padding: 15px 15px;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: #F2F2EB;
+}
+
+section .container-fluid {
+  background: #95A3A5;
+  height: 80vh;
+}
+
+section .container-fluid .row {
+  height: 80vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .container-fluid .row .maintext {
+  color: #384F4F;
+  text-align: center;
+}
+
+section .container-fluid .row .mainphoto {
+  text-align: center;
+}
+
+section .container-fluid .row .mainphoto .mainimage {
+  width: 70%;
+}
+
+section .clip {
+  height: 15vh;
+  border-top-left-radius: 100% 30%;
+  border-top-right-radius: 100% 30%;
+  background: #384F4F;
+  position: relative;
+  bottom: 22px;
+}
+
+/*@media (min-width: 576px)
+{
+
+}*/
+@media (min-width: 768px) {
+  section .container-fluid .maintext {
+    left: 5%;
+  }
+}
+
+@media (min-width: 992px) {
+  section .container-fluid .maintext {
+    left: 0%;
+  }
+}
+
+@media (min-width: 1200px) {
+  section .container-fluid .maintext {
+    left: 5%;
+  }
+  section .container-fluid .mainphoto {
+    right: 8%;
+  }
+}
+
+@media (min-width: 1400px) {
+  section .container-fluid .maintext {
+    left: 4%;
+  }
+}
+/*# sourceMappingURL=index.css.map */
