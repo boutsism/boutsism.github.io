@@ -23,8 +23,13 @@ $white: #F2F2EB;
     /* Legacy iOS */
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-family: "Noto Sans", sans-serif;
+    background: $petrol;
   }
 
 .navbar-light {
@@ -33,7 +38,7 @@ $white: #F2F2EB;
         .nav-link {
             color: $petrol;
             text-decoration: none;
-            padding: 15px 15px;       
+            padding: 1em 1em;       
             font-size: 1.4em;
             text-align: center;
 
@@ -43,22 +48,29 @@ $white: #F2F2EB;
         }
     }
 }
-section {
+.section1{
     .container-fluid {
         background: $cyan;
-        height: 80vh;
+        height: 60vh;
         .row {
-            height: 80vh;
+            height: 50vh;
             align-items: center;
-            .maintext {
+            .sectiontext {
                 color: $petrol;
                 text-align: center;
+                margin-top: 1.87em;
+                h1 {
+                    font-size: 3.5em;
+                }
+                p {
+                    font-size: 1.5em;
+                }
             }
-            .mainphoto {
+            .sectionphoto {
                 text-align: center;
-
-                .mainimage {
-                    width: 70%;
+                margin-bottom: 5em;
+                .coding {
+                    width: 80%;
                 }
             }
         }
@@ -69,52 +81,165 @@ section {
         border-top-right-radius: 100% 30%;
         background: $petrol;
         position: relative;
-        bottom: 22px;
+        bottom: 1.37em;
+        .coderman {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+            position: relative;
+            bottom: 50%;
+        }
     }
 }
-/*@media (min-width: 576px)
-{
 
-}*/
+.section2 {
+    height: 80vh;
+    width: 100%;
+    .container {
+        .row {
+            .about {
+                background: $white;
+                h2 {
+                    font-size: 3em;
+                    margin-top: 20px;
+                    margin-left: 20px;
+                    background: linear-gradient(to right, #C38251 0%, #384F4F 50%, #384F4F 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                p {
+                    margin: 20px 20px 0 20px;
+                    font-size: 2em;
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
+
+.section3 {
+    .projects {
+        background: $orange;
+        width: 100%;
+        height: 60vh;
+    }
+}
+
+.scrollToTopBtn {
+    background-color: $brown;
+    color: $white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    width: 3em;
+    height: 3em;
+    float: right;
+    /* place it at the bottom right corner */
+    /* keep it at the top of everything else */
+    z-index: 100;
+    /* also add a translate effect */
+    transform: translateY(100px);
+    /* and a transition */
+    transition: all 0.5s ease;
+}
+
+@media (min-width: 576px) {
+    .section1 {
+        .clip {
+            .coderman {
+                width: 40%;
+                bottom: 70%;
+            }
+        }
+    }
+}
 
 @media (min-width: 768px) {
-    section {
+    .section1 {
         .container-fluid {
-            .maintext {
-                left: 5%;
+            .row {
+                .sectiontext {
+                    left: 2%;
+                    margin-top: 0;
+                }
+                .sectionphoto {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .clip {
+            .coderman {
+                width: 30%;
+                bottom: 70%;
             }
         }
     }
 }
 
 @media (min-width: 992px) {
-    section {
+    .section1 {
         .container-fluid {
-            .maintext {
+            .sectiontext {
                 left: 0%;
+            }
+            .sectionphoto {
+                right: 5%;
+            }
+        }
+        .clip {
+            .coderman {
+                width: 25%;
+                bottom: 75%;
             }
         }
     }
 }
 
 @media (min-width: 1200px) {
-    section {
+    .section1 {
         .container-fluid {
-            .maintext {
+            .sectiontext {
                 left: 5%;
             }
-            .mainphoto {
+            .sectionphoto {
                 right: 8%;
+            }
+        }
+        .clip {
+            .coderman {
+                width: 22%;
+                bottom: 85%;
             }
         }
     }
 }
 
 @media (min-width: 1400px) {
-    section {
+    .section1 {
         .container-fluid {
-            .maintext {
-                left: 4%;
+            height: 70vh;
+        }
+        .clip {
+            .coderman {
+                width: 20%;
+                bottom: 85%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .section1 {
+        .container-fluid {
+            height: 80vh;
+        }
+        .clip {
+            .coderman {
+                width: 20%;
+                bottom: 110%;
             }
         }
     }

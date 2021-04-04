@@ -1,3 +1,17 @@
+/*document.addEventListener("wheel", scrolling);
+function scrolling(e) {
+    if (e.deltaY < 0) {
+        document.documentElement.scrollTo({
+            top: 0,
+        });
+    }
+    else if (e.deltaY > 0) {
+        document.documentElement.scrollTo({
+            top: 550,
+          });
+    }
+}*/
+
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -40,6 +54,6 @@ window.onload = function() {
     }
 
     var css = document.createElement("style");
-    css.type = "text/css";
     document.body.appendChild(css);
 };
+
