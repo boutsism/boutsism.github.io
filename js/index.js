@@ -12,48 +12,44 @@ function scrolling(e) {
     }
 }*/
 
-var TxtType = function(el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
-};
-
-TxtType.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
-
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-
-    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-    var that = this;
-    var delta = 200 - Math.random() * 100;
-
-    if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-    } 
-
-    setTimeout(function() {
-    that.tick();
-    }, delta);
-};
-
-window.onload = function() {
-    var elements = document.getElementsByClassName('typewrite');
-    for (var i=0; i<elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-type');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-          new TxtType(elements[i], JSON.parse(toRotate), period);
-        }
+document.addEventListener("DOMContentLoaded", function() { 
+  const myNav = document.querySelector('.navbar-light');
+  window.onscroll = function () {
+    if (document.documentElement.scrollTop > 1000) {
+      myNav.classList.add("nav-scrolled");
+      myNav.classList.remove("nav-scrolled1");
     }
+    else if (document.documentElement.scrollTop > 500) {
+      myNav.classList.add("nav-scrolled1");
+      myNav.classList.remove("nav-scrolled");
 
-    var css = document.createElement("style");
-    document.body.appendChild(css);
+    }
+    else if (document.documentElement.scrollTop > 50) {
+      myNav.classList.add("nav-scrolled");
+      myNav.classList.remove("nav-scrolled1");
+    }
+    else {
+      myNav.classList.remove("nav-scrolled1");
+      myNav.classList.remove("nav-scrolled");
+    }
+    AOS.init();
+  }
+});
+
+/*const cookieBox = document.querySelector(".cookiebar"),
+  acceptBtn = cookieBox.querySelector(".btn");
+
+acceptBtn.onclick = () => {
+  document.cookie = "CookieBy=boutsism; max-age=" + 60 * 60 * 24 * 30;
+  if (document.cookie) {
+    cookieBox.style.display = "none"
+  } else {
+    alert(
+      "Δεν είναι δυνατή η ρύθμιση του cookie! Παρακαλώ καταργήστε τον αποκλεισμό αυτού του ιστότοπου από τη ρύθμιση cookie του προγράμματος περιήγησής σας."
+    );
+  }
 };
-
+let checkCookie = document.cookie.indexOf("CookieBy=boutsism");
+checkCookie != -1
+  ? cookieBox.style.display = "none"
+  : cookieBox.style.display = "block";*/
