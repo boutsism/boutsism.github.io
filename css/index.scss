@@ -33,61 +33,64 @@ $white: #F9F9FA;
   }
 
 .navbar-light {
-    .navbar-nav {
-        .nav-link {
-            color: $coal;
-            text-decoration: none;
-            font-size: 1.4em;
-            text-align: center;
-            &.active {
-                color: $brown;
-            }
-            &:hover {
-                color: $brown;
-            }
-        }
-    }
-}
-
-.nav-scrolled {
-    background-color: $coal;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+    background: $coal;
     .navbar-nav {
         .nav-link {
             color: $pink;
             text-decoration: none;
             font-size: 1.4em;
             text-align: center;
+            cursor: pointer;
             &.active {
                 color: $white;
             }
             &:hover {
                 color: $white;
+            }
+        }
+    }
+}
+
+.nav-scrolled {
+    background-color: $coal !important;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+    .navbar-nav {
+        .nav-link {
+            color: $pink !important;
+            text-decoration: none;
+            font-size: 1.4em;
+            text-align: center;
+            &.active {
+                color: $white !important;
+            }
+            &:hover {
+                color: $white !important;
             }
         }
     }
 }
 
 .nav-scrolled1 {
-    background-color: $brown;
+    background-color: $brown !important;
     box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
     .navbar-nav {
         .nav-link {
-            color: $silver;
+            color: $silver !important;
             text-decoration: none;
             font-size: 1.4em;
             text-align: center;
             &.active {
-                color: $white;
+                color: $white !important;
             }
             &:hover {
-                color: $white;
+                color: $white !important;
             }
         }
     }
 }
 
 .section1 {
+    margin-top: 70px;
     .container-fluid {
         height: 100%;
         .row {
@@ -95,7 +98,7 @@ $white: #F9F9FA;
                 color: $coal;
                 text-align: center;
                 h1 {
-                    font-size: 3em;
+                    font-size: 2.4em;
                     overflow: hidden;
                     white-space: nowrap;
                     margin: 0 auto; 
@@ -128,6 +131,11 @@ $white: #F9F9FA;
                         .bi-linkedin {
                             &:hover {
                                 color: #0a66c2;
+                             }
+                        }
+                        .bi-devto {
+                            &:hover {
+                                color: black;
                              }
                         }
                     }
@@ -199,6 +207,7 @@ $white: #F9F9FA;
                 .coding {
                     width: 100%;
                     height: 100%;
+                    cursor: pointer;
                 }
             }   
         }
@@ -313,7 +322,32 @@ $white: #F9F9FA;
     transition: all 0.5s ease;
 }*/
 
+@media (min-width: 360px) {
+    .section1 {
+        .container-fluid {
+            .row {
+                .sectiontext {
+                    h1 {
+                        font-size: 2.8em;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 576px) {
+    .section1 {
+        .container-fluid {
+            .row {
+                .sectiontext {
+                    h1 {
+                        font-size: 3em;
+                    }
+                }
+            }
+        }
+    }
     .section2 {
         .container {
             .row {
@@ -412,6 +446,21 @@ $white: #F9F9FA;
 }
 
 @media (min-width: 992px) {
+    .navbar-light {
+        background: $silver;
+        .navbar-nav {
+            .nav-link {
+                color: $coal;
+                &.active {
+                    color: $brown;
+                }
+                &:hover {
+                    color: $brown;
+                }
+            }
+        }
+
+    }    
     .section1 {
         height: 80vh;
         .container-fluid {

@@ -12,6 +12,30 @@ function scrolling(e) {
     }
 }*/
 
+function about() {
+  const heading2 = document.querySelector("h2")
+  heading2.scrollIntoView({
+    behavior: 'smooth', // smooth scroll
+    block: 'center' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+  })
+}
+
+function projects() {
+  const heading3 = document.querySelector(".section3")
+  heading3.scrollIntoView({
+    behavior: 'smooth', // smooth scroll
+    block: 'center' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+  })
+}
+
+function contact() {
+  const heading4 = document.querySelector("h4")
+  heading4.scrollIntoView({
+    behavior: 'smooth', // smooth scroll
+    block: 'center' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+  })
+}
+
 document.addEventListener("DOMContentLoaded", function() { 
   const myNav = document.querySelector('.navbar-light');
   window.onscroll = function () {

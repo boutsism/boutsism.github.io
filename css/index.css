@@ -18,61 +18,70 @@ body {
   background: #C0C0C0;
 }
 
+.navbar-light {
+  background: #282E3B;
+}
+
 .navbar-light .navbar-nav .nav-link {
-  color: #282E3B;
+  color: #A897A3;
   text-decoration: none;
   font-size: 1.4em;
   text-align: center;
+  cursor: pointer;
 }
 
 .navbar-light .navbar-nav .nav-link.active {
-  color: #82533F;
+  color: #F9F9FA;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #82533F;
+  color: #F9F9FA;
 }
 
 .nav-scrolled {
-  background-color: #282E3B;
+  background-color: #282E3B !important;
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
           box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
 
 .nav-scrolled .navbar-nav .nav-link {
-  color: #A897A3;
+  color: #A897A3 !important;
   text-decoration: none;
   font-size: 1.4em;
   text-align: center;
 }
 
 .nav-scrolled .navbar-nav .nav-link.active {
-  color: #F9F9FA;
+  color: #F9F9FA !important;
 }
 
 .nav-scrolled .navbar-nav .nav-link:hover {
-  color: #F9F9FA;
+  color: #F9F9FA !important;
 }
 
 .nav-scrolled1 {
-  background-color: #82533F;
+  background-color: #82533F !important;
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
           box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
 
 .nav-scrolled1 .navbar-nav .nav-link {
-  color: #C0C0C0;
+  color: #C0C0C0 !important;
   text-decoration: none;
   font-size: 1.4em;
   text-align: center;
 }
 
 .nav-scrolled1 .navbar-nav .nav-link.active {
-  color: #F9F9FA;
+  color: #F9F9FA !important;
 }
 
 .nav-scrolled1 .navbar-nav .nav-link:hover {
-  color: #F9F9FA;
+  color: #F9F9FA !important;
+}
+
+.section1 {
+  margin-top: 70px;
 }
 
 .section1 .container-fluid {
@@ -85,7 +94,7 @@ body {
 }
 
 .section1 .container-fluid .row .sectiontext h1 {
-  font-size: 3em;
+  font-size: 2.4em;
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
@@ -135,6 +144,10 @@ body {
 
 .section1 .container-fluid .row .sectiontext .icons a .bi-linkedin:hover {
   color: #0a66c2;
+}
+
+.section1 .container-fluid .row .sectiontext .icons a .bi-devto:hover {
+  color: black;
 }
 
 .section1 .container-fluid .row .sectionphoto {
@@ -209,6 +222,7 @@ body {
 .section3 .projects .row .work .coding {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .section4 {
@@ -336,7 +350,16 @@ body {
     transform: translateY(100px);
     transition: all 0.5s ease;
 }*/
+@media (min-width: 360px) {
+  .section1 .container-fluid .row .sectiontext h1 {
+    font-size: 2.8em;
+  }
+}
+
 @media (min-width: 576px) {
+  .section1 .container-fluid .row .sectiontext h1 {
+    font-size: 3em;
+  }
   .section2 .container .row .about p {
     margin: 20px 10px 50px 10px;
   }
@@ -424,6 +447,18 @@ body {
 }
 
 @media (min-width: 992px) {
+  .navbar-light {
+    background: #C0C0C0;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: #282E3B;
+  }
+  .navbar-light .navbar-nav .nav-link.active {
+    color: #82533F;
+  }
+  .navbar-light .navbar-nav .nav-link:hover {
+    color: #82533F;
+  }
   .section1 {
     height: 80vh;
   }
