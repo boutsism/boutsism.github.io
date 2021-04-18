@@ -1,16 +1,28 @@
-/*document.addEventListener("wheel", scrolling);
-function scrolling(e) {
-    if (e.deltaY < 0) {
-        document.documentElement.scrollTo({
-            top: 0,
-        });
+var target = document.querySelector(".section4");
+var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+var rootElement = document.documentElement;
+
+function callback(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Show button
+      scrollToTopBtn.classList.add("showBtn");
+    } else {
+      // Hide button
+      scrollToTopBtn.classList.remove("showBtn");
     }
-    else if (e.deltaY > 0) {
-        document.documentElement.scrollTo({
-            top: 550,
-          });
-    }
-}*/
+  });
+}
+
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+scrollToTopBtn.addEventListener("click", scrollToTop);
+let observer = new IntersectionObserver(callback);
+observer.observe(target);
 
 function about() {
   const heading2 = document.querySelector("h2")
