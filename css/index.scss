@@ -23,76 +23,56 @@ $white: #F9F9FA;
     /* Legacy iOS */
   }
 
-  html {
+html {
     scroll-behavior: smooth;
-  }
+}
 
-  body {
+body {
     font-family: "Noto Sans", sans-serif;
     background: $silver;
-  }
+    overflow-x: hidden;
+
+}
 
 .navbar-light {
-    background: $coal;
     .navbar-nav {
         .nav-link {
-            color: $pink;
+            color: $coal;
             text-decoration: none;
             font-size: 1.4em;
             text-align: center;
             cursor: pointer;
             &.active {
-                color: $white;
+                color: $brown;
             }
             &:hover {
-                color: $white;
+                color: $brown;
             }
         }
+        
     }
-}
-
-.nav-scrolled {
-    background-color: $coal !important;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
-    .navbar-nav {
-        .nav-link {
-            color: $pink !important;
-            text-decoration: none;
-            font-size: 1.4em;
+    ul {
+        margin-bottom: 0;
+        .dropdown-toggle {
             text-align: center;
-            &.active {
-                color: $white !important;
-            }
-            &:hover {
-                color: $white !important;
-            }
+            color: $coal;
         }
-    }
-}
-
-.nav-scrolled1 {
-    background-color: $brown !important;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
-    .navbar-nav {
-        .nav-link {
-            color: $silver !important;
-            text-decoration: none;
-            font-size: 1.4em;
+        .dropdown-menu {
+            padding: 0;
             text-align: center;
-            &.active {
-                color: $white !important;
-            }
-            &:hover {
-                color: $white !important;
-            }
+            background-color: $silver;
+        }
+        .dropdown-menu-right {
+            right: 0;
+            left: 0;
         }
     }
 }
 
 .section1 {
-    margin-top: 70px;
+    width: 100%;
+    height: 100%;
     .container-fluid {
-        height: 100%;
         .row {
             .sectiontext {
                 color: $coal;
@@ -125,18 +105,18 @@ $white: #F9F9FA;
                         color: $coal;
                         .bi-twitter {
                             &:hover {
-                               color: #1da1f2;
+                                color: #1da1f2;
                             }
                         }
                         .bi-linkedin {
                             &:hover {
                                 color: #0a66c2;
-                             }
+                            }
                         }
                         .bi-devto {
                             &:hover {
                                 color: black;
-                             }
+                            }
                         }
                     }
                 }
@@ -181,6 +161,7 @@ $white: #F9F9FA;
 }
 
 .section3 {
+    width: 100%;
     background: $silver;
     .projects {
         background: $brown;
@@ -215,12 +196,13 @@ $white: #F9F9FA;
 }
 
 .section4 {
+    width: 100%;
     text-align: center;
     background: $coal;
     h4 {
         font-size: 1.5em;
         padding: 20px;
-        color: $pink;
+        color: $silver;
     }
     .contactme {
         .row {
@@ -268,6 +250,62 @@ $white: #F9F9FA;
     }
 }
 
+footer {
+    width: 100%;
+    .navlist {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .navitems {
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 1.4em;
+            cursor: pointer;
+            color: $coal;
+            text-decoration: none;
+            &.active {
+                color: $brown;
+            }
+            &:hover {
+                color: $brown;
+            }
+        }
+    }
+    .social {
+        text-align: center;
+        .icons {
+            padding: 0 3px;
+            cursor: pointer;
+            a {
+                color: $coal;
+                .bi-twitter {
+                    &:hover {
+                        color: #1da1f2;
+                    }
+                }
+                .bi-linkedin {
+                    &:hover {
+                        color: #0a66c2;
+                    }
+                }
+                .bi-devto {
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    .copyright {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $coal;
+    }
+}
+
 /*.cookiebar {
     background: black;
     text-align: center;
@@ -308,8 +346,8 @@ $white: #F9F9FA;
 }*/
 
 .scrollToTopBtn {
-    background-color: $brown;
-    color: $white;
+    background-color: $pink;
+    color: $coal;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -318,7 +356,7 @@ $white: #F9F9FA;
     width: 3em;
     position: fixed;
     bottom: 70px;
-    right: 30px;
+    right: 10px;
     z-index: 100;
     opacity: 0;
     transform: translateY(100px);
@@ -393,13 +431,13 @@ $white: #F9F9FA;
                 color: white; 
                 padding: 0.6em 0.6em;
                 margin-top: 0;
-              }
-              .more {
+            }
+            .more {
                 color: white;
                 display: inline-block;
                 padding: 0.2em;
-              }
-              .btn {
+            }
+            .btn {
                 border-radius: 0;
                 padding: 1em 1em;
                 margin-top: 0;
@@ -455,20 +493,12 @@ $white: #F9F9FA;
 
 @media (min-width: 992px) {
     .navbar-light {
-        background: $silver;
-        .navbar-nav {
-            .nav-link {
-                color: $coal;
-                &.active {
-                    color: $brown;
-                }
-                &:hover {
-                    color: $brown;
-                }
+        ul {
+            .dropdown-menu-right {
+                left: auto;
             }
         }
-
-    }    
+    }
     .section1 {
         height: 80vh;
         .container-fluid {
@@ -524,17 +554,13 @@ $white: #F9F9FA;
 
 @media (min-width: 1400px) {
     .section1 {
-        .container-fluid {
-            height: 70vh;
-        }
+        height: 70vh;
     }
 }
 
 @media (min-width: 1600px) {
     .section1 {
-        .container-fluid {
-            height: 80vh;
-        }
+        height: 80vh;
     }
 }
 
