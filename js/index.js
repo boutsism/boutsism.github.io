@@ -3,7 +3,7 @@ const scrollToTopBtn = document.querySelector(".scrollToTopBtn");
 const rootElement = document.documentElement;
 
 function callback(entries, observer) {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       // Show button
       scrollToTopBtn.classList.add("showBtn");
@@ -17,7 +17,7 @@ function callback(entries, observer) {
 function scrollToTop() {
   rootElement.scrollTo({
     top: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 }
 scrollToTopBtn.addEventListener("click", scrollToTop);
@@ -25,20 +25,20 @@ let observer = new IntersectionObserver(callback);
 observer.observe(target);
 
 //Navbar scroll to spots
-const choices = document.querySelectorAll(".nav-choices")
-const spot = ["h2", "h3", "h4"];
+const choices = document.querySelectorAll(".nav-choices");
+const spot = ["h2", "h3", "h4", "h2", "h3", "h4"];
 choices.forEach(function (item, index) {
   const elmnt = document.querySelector(spot[index]);
-  item.addEventListener('click', function () {
+  item.addEventListener("click", () => {
     elmnt.scrollIntoView({
-      block: "start"
+      block: "start",
     });
   });
 });
 
 window.onscroll = function () {
   AOS.init();
-}
+};
 
 /*const cookieBox = document.querySelector(".cookiebar"),
   acceptBtn = cookieBox.querySelector(".btn");
