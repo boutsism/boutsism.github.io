@@ -1,4 +1,4 @@
-const target = document.querySelector(".work");
+const target = document.querySelector("footer");
 const scrollToTopBtn = document.querySelector(".scrollToTopBtn");
 const rootElement = document.documentElement;
 
