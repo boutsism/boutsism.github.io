@@ -181,11 +181,14 @@ body {
       -moz-background-clip: text;
     }
     .row {
+      padding-left: 30px;
+      padding-right: 30px;
       .work {
         background: $white;
-        margin: 0 30px 30px 30px;
         padding-left: 0;
         padding-right: 0;
+        margin-bottom: 30px;
+
         .coding {
           width: 100%;
           height: 100%;
@@ -452,10 +455,14 @@ footer {
     height: 50vh;
     display: flex;
     align-items: center;
-
     .container-fluid {
       .row {
         align-items: center;
+        .sectiontext {
+          h1 {
+            font-size: 2.3em;
+          }
+        }
         .sectionphoto {
           margin: 0 auto;
         }
@@ -465,6 +472,9 @@ footer {
   .section3 {
     .projects {
       .row {
+        padding-left: 0;
+        padding-right: 0;
+  
         .work {
           margin-bottom: 30px;
           margin-left: auto;
@@ -495,6 +505,7 @@ footer {
 
 @media (min-width: 992px) {
   .navbar-light {
+    padding-left: 4.5em;
     ul {
       .dropdown-menu-right {
         left: auto;
