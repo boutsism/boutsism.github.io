@@ -572,11 +572,17 @@ footer .copyright {
   .section1 {
     height: 70vh;
   }
+  .section2 {
+    height: 35vh;
+  }
 }
 
 @media (min-width: 1600px) {
   .section1 {
     height: 80vh;
+  }
+  .section2 {
+    height: 30vh;
   }
 }
 /*# sourceMappingURL=index.css.map */
