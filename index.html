@@ -36,6 +36,7 @@
     ></script>
     <script src="js/index.js" defer></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/lazysizes.min.js" async=""></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -142,11 +143,12 @@
           </div>
           <div class="col-md-6 sectionphoto">
             <img
-              src="img/coding.webp"
-              class="coding img-fluid rounded shadow-lg"
-              loading="lazy"
-              width="3882"
-              height="2584"
+              data-sizes="auto"
+              data-src="../img/coding1920.webp"
+              data-srcset="../img/coding640.webp 640w,
+              ../img/coding1280.webp 1280w,
+              ../img/coding1920.webp 1920w"
+              class="coding lazyload rounded shadow-lg"
               alt="coding"
             />
           </div>
