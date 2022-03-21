@@ -4,9 +4,7 @@
   font-weight: 400;
   font-display: swap;
   src: url("../fonts/noto-sans-v11-latin_greek-regular.eot");
-  /* IE9 Compatibility Modes */
   src: local(""), url("../fonts/noto-sans-v11-latin_greek-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/noto-sans-v11-latin_greek-regular.woff2") format("woff2"), url("../fonts/noto-sans-v11-latin_greek-regular.woff") format("woff"), url("../fonts/noto-sans-v11-latin_greek-regular.ttf") format("truetype"), url("../fonts/noto-sans-v11-latin_greek-regular.svg#Noto Sans") format("svg");
-  /* Legacy iOS */
 }
 
 html {
@@ -17,6 +15,10 @@ body {
   font-family: "Noto Sans", sans-serif;
   background: #c0c0c0;
   overflow-x: hidden;
+}
+
+.navbar-light .navbar-toggler {
+  margin-right: 0.625rem;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -286,6 +288,10 @@ footer .navlist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -479,6 +485,12 @@ footer .copyright {
     border-radius: 0;
     padding: 1em 1em;
     margin-top: 0;
+  }
+  footer .navlist {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
