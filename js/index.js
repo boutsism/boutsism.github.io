@@ -1,7 +1,35 @@
+document.addEventListener("scroll", initGTMOnEvent);
+document.addEventListener("mousemove", initGTMOnEvent);
+document.addEventListener("touchstart", initGTMOnEvent);
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(initGTM, 2000);
+});
+function initGTMOnEvent(event) {
+  initGTM();
+  event.currentTarget.removeEventListener(event.type, initGTMOnEvent);
+}
+function initGTM() {
+  if (window.gtmDidInit) {
+    return false;
+  }
+  window.gtmDidInit = true;
+  const script = document.createElement("script");
+  script.type = "text/javascript";
+  script.onload = () => {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-BQES39LV2S");
+  };
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-BQES39LV2S";
+  script.defer = true;
+  document.getElementsByTagName("body")[0].appendChild(script);
+}
 const target = document.querySelector("footer");
 const scrollToTopBtn = document.querySelector(".scrollToTopBtn");
 const rootElement = document.documentElement;
-
 function callback(entries, observer) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -13,7 +41,6 @@ function callback(entries, observer) {
     }
   });
 }
-
 function scrollToTop() {
   rootElement.scrollTo({
     top: 0,
@@ -23,8 +50,6 @@ function scrollToTop() {
 scrollToTopBtn.addEventListener("click", scrollToTop);
 let observer = new IntersectionObserver(callback);
 observer.observe(target);
-
-//Navbar scroll to spots
 const choices = document.querySelectorAll(".nav-choices");
 const spot = ["h2", "h3", "h4", "h2", "h3", "h4"];
 choices.forEach(function (item, index) {
@@ -35,7 +60,6 @@ choices.forEach(function (item, index) {
     });
   });
 });
-
 window.onscroll = function () {
   AOS.init();
 };
