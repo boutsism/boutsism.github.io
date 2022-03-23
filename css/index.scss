@@ -1,7 +1,7 @@
 $coal: #282e3b;
-$brown: #82533f;
+$cyan: #678ea3;
 $silver: #c0c0c0;
-$pink: #a897a3;
+$green: #1B7979;
 $white: #f9f9fa;
 @font-face {
   font-family: "Noto Sans";
@@ -38,10 +38,10 @@ body {
       text-align: center;
       cursor: pointer;
       &.active {
-        color: $brown;
+        color: $green;
       }
       &:hover {
-        color: $brown;
+        color: $green;
       }
     }
   }
@@ -139,11 +139,7 @@ body {
           font-size: 1.5em;
           margin-top: 40px;
           margin-left: 20px;
-          background: #c0c0c0;
-          background: linear-gradient(to right, #c0c0c0 0%, #82533f 65%, #82533f 100%);
-          -webkit-background-clip: text;
-          background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color: $cyan;
         }
         p {
           margin: 20px 20px 40px 20px;
@@ -159,8 +155,8 @@ body {
   width: 100%;
   background: $silver;
   .projects {
-    background: $brown;
-    color: $white;
+    background: $cyan;
+    color: $coal;
     height: 100%;
     position: relative;
     bottom: 30px;
@@ -169,10 +165,6 @@ body {
       margin: 20px 0 20px 20px;
       text-align: center;
       padding: 20px 0 5px 0;
-      text-shadow: 1px 4px 4px $coal;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -moz-background-clip: text;
     }
     .row {
       padding-left: 30px;
@@ -198,7 +190,7 @@ body {
   h4 {
     font-size: 1.5em;
     padding: 20px;
-    color: $silver;
+    color: $cyan;
   }
   .contactme {
     .row {
@@ -216,8 +208,8 @@ body {
         .form-control {
           margin: 0 auto;
           width: 90%;
-          border: 2px solid $brown;
-          color: $brown;
+          border: 2px solid $green;
+          color: $green;
           &:focus {
             box-shadow: none;
           }
@@ -260,10 +252,10 @@ footer {
       color: $coal;
       text-decoration: none;
       &.active {
-        color: $brown;
+        color: $green;
       }
       &:hover {
-        color: $brown;
+        color: $green;
       }
     }
   }
@@ -339,7 +331,7 @@ footer {
     }
 }*/
 .scrollToTopBtn {
-  background-color: $pink;
+  background-color: $cyan;
   color: $coal;
   border: none;
   border-radius: 50%;
