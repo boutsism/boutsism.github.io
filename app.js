@@ -18,5 +18,12 @@ function scrollContact() {
 	Contact.scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
 function scrollToTop() {
-    scrollTo({ top: 0, behavior: "smooth" });
-  }
+	scrollTo({ top: 0, behavior: 'smooth' });
+}
+const hamburger = document.querySelector('.hamburger');
+function handleScroll() {
+	if (hamburger) {
+		hamburger.classList.add('hidden');
+	}
+}
+window.addEventListener('scroll', handleScroll);
